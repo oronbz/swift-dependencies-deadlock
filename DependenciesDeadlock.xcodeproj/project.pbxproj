@@ -11,6 +11,9 @@
 		82C64C412C07845E0058277C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C64C402C07845E0058277C /* ContentView.swift */; };
 		82C64C432C0784600058277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C64C422C0784600058277C /* Assets.xcassets */; };
 		82C64C462C0784600058277C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C64C452C0784600058277C /* Preview Assets.xcassets */; };
+		82C64C4E2C0784980058277C /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 82C64C4D2C0784980058277C /* Dependencies */; };
+		82C64C502C0784980058277C /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 82C64C4F2C0784980058277C /* DependenciesMacros */; };
+		82C64C522C0784AE0058277C /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C64C512C0784AE0058277C /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		82C64C402C07845E0058277C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82C64C422C0784600058277C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C64C452C0784600058277C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82C64C512C0784AE0058277C /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C64C502C0784980058277C /* DependenciesMacros in Frameworks */,
+				82C64C4E2C0784980058277C /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 				82C64C402C07845E0058277C /* ContentView.swift */,
 				82C64C422C0784600058277C /* Assets.xcassets */,
 				82C64C442C0784600058277C /* Preview Content */,
+				82C64C512C0784AE0058277C /* Dependencies.swift */,
 			);
 			path = DependenciesDeadlock;
 			sourceTree = "<group>";
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = DependenciesDeadlock;
+			packageProductDependencies = (
+				82C64C4D2C0784980058277C /* Dependencies */,
+				82C64C4F2C0784980058277C /* DependenciesMacros */,
+			);
 			productName = DependenciesDeadlock;
 			productReference = 82C64C3B2C07845E0058277C /* DependenciesDeadlock.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 82C64C322C07845E0058277C;
+			packageReferences = (
+				82C64C4C2C0784980058277C /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+			);
 			productRefGroup = 82C64C3C2C07845E0058277C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C64C522C0784AE0058277C /* Dependencies.swift in Sources */,
 				82C64C412C07845E0058277C /* ContentView.swift in Sources */,
 				82C64C3F2C07845E0058277C /* DependenciesDeadlockApp.swift in Sources */,
 			);
@@ -344,6 +359,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		82C64C4C2C0784980058277C /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		82C64C4D2C0784980058277C /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82C64C4C2C0784980058277C /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		82C64C4F2C0784980058277C /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 82C64C4C2C0784980058277C /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82C64C332C07845E0058277C /* Project object */;
 }
